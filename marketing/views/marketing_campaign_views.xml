@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+        <!-- Tree View for Marketing Campaigns -->
+        <record id="view_marketing_campaign_tree" model="ir.ui.view">
+            <field name="name">marketing.campaign.tree</field>
+            <field name="model">marketing.campaign</field>
+            <field name="arch" type="xml">
+                <tree string="Marketing Campaigns">
+                    <field name="name"/>
+                    <field name="email_template_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View for Marketing Campaigns -->
+        <record id="view_marketing_campaign_form" model="ir.ui.view">
+            <field name="name">marketing.campaign.form</field>
+            <field name="model">marketing.campaign</field>
+            <field name="arch" type="xml">
+                <form string="Marketing Campaign">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="email_template_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

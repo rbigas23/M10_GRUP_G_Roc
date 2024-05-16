@@ -1,0 +1,34 @@
+<odoo>
+    <data>
+        <!-- Root Menu Item -->
+        <menuitem name="Marketing" id="marketing.menu_root" sequence="1"/>
+
+        <!-- Accions -->
+        <record id="marketing.action_marketing_campaigns" model="ir.actions.act_window">
+            <field name="name">Marketing Campaigns</field>
+            <field name="res_model">marketing.campaign</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create a new marketing campaign.
+                </p>
+            </field>
+        </record>
+
+        <record id="marketing.action_marketing_emails" model="ir.actions.act_window">
+            <field name="name">Marketing Emails</field>
+            <field name="res_model">marketing.email</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create a new marketing email.
+                </p>
+            </field>
+        </record>
+
+        <!-- Submenús -->
+        <menuitem name="Campaigns" id="marketing.menu_campaigns" parent="marketing.menu_root" sequence="1" action="marketing.action_marketing_campaigns"/>
+        <menuitem name="Emails" id="marketing.menu_emails" parent="marketing.menu_root" sequence="2" action="marketing.action_marketing_emails"/>
+
+    </data>
+</odoo>

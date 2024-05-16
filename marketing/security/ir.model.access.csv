@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_marketing_campaign,access_marketing_campaign,model_marketing_campaign,,1,1,1,1
+access_marketing_email,access_marketing_email,model_marketing_email,,1,1,1,1

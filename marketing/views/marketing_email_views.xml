@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+        <!-- Tree View for Marketing Emails -->
+        <record id="view_marketing_email_tree" model="ir.ui.view">
+            <field name="name">marketing.email.tree</field>
+            <field name="model">marketing.email</field>
+            <field name="arch" type="xml">
+                <tree string="Marketing Emails">
+                    <field name="name"/>
+                    <field name="campaign_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View for Marketing Emails -->
+        <record id="view_marketing_email_form" model="ir.ui.view">
+            <field name="name">marketing.email.form</field>
+            <field name="model">marketing.email</field>
+            <field name="arch" type="xml">
+                <form string="Marketing Email">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="recipient_ids"/>
+                            <field name="campaign_id"/>
+                            <field name="state" readonly="1"/>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="send_email" string="Send Email" type="object" class="btn-primary"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
