@@ -1,0 +1,44 @@
+<odoo>
+    <data>
+        <!-- Acció dels appointmnets -->
+        <record id="action_medical_appointments" model="ir.actions.act_window">
+            <field name="name">Medical Appointments</field>
+            <field name="res_model">medical.appointment</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <!-- Menú principal-->
+        <menuitem name="Appointments" id="menu_root" action="action_medical_appointments" sequence="1"/>
+
+        <!-- Vista del arbre-->
+        <record id="view_medical_appointment_tree" model="ir.ui.view">
+            <field name="name">medical.appointment.tree</field>
+            <field name="model">medical.appointment</field>
+            <field name="arch" type="xml">
+                <tree string="Medical Appointments">
+                    <field name="name"/>
+                    <field name="appointment_date"/>
+                    <field name="doctor_name"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Vista del formulari -->
+        <record id="view_medical_appointment_form" model="ir.ui.view">
+            <field name="name">medical.appointment.form</field>
+            <field name="model">medical.appointment</field>
+            <field name="arch" type="xml">
+                <form string="Medical Appointment">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="appointment_date"/>
+                            <field name="doctor_name"/>
+                            <field name="reason"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
